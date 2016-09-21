@@ -1,0 +1,24 @@
+<template name="tasksList">
+    <div class="tasks page">
+        <div class="tasks-top">
+            <ul class="list-inline">
+                <li><a type="button" href="{{pathFor 'taskSubmit'}}" id="taskSubmit" class="btn btn-primary">新建任务</a></li>
+                <li class="tasksCount"><p>The current number of tasks：{{tasksCount}}</p></li>
+                <li style="float: right"><a type="button" href="#" id="taskStart" class="btn btn-success">开始任务</a></li>
+            </ul>
+        </div>
+        <div class="wrapper">
+        {{#each tasks}}
+            {{>taskItem}}
+        {{/each}}
+       </div>
+
+    {{#if nextPath}}
+        <a class="load-more" href="{{nextPath}}">Load more</a>
+    {{else}}
+        {{#unless ready}}
+            {{> spinner}}
+        {{/unless}}
+    {{/if}}
+    </div>
+</template>

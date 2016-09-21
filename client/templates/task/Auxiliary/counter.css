@@ -1,0 +1,13 @@
+[name=counterNumber]{
+    width: 6em;
+    border:none;
+    font-size: 100%;
+    font-weight: bold;
+    padding:0.15em;
+    text-align:right;
+}
+[name=counterNumber]:hover{
+background-color: #f9f9f9;
+cursor:pointer;
+}
+

@@ -1,0 +1,25 @@
+<template name="taskItem">
+    <div class="task">
+        <div class="task-title">
+            <h3><a href="{{pathFor 'taskEdit'}}">{{task}}</a><a href="{{pathFor 'taskChart'}}"><span>chart</span></a></h3>
+            <p>Complete {{taskDay}} day</p>
+        </div>
+        <p>
+        <div class="my-checkbox switch switch-small">
+            <input type="checkbox"  {{checked}}>
+        </div>
+        </p>
+        <!--<a href="{{pathFor 'postPage'}}" class="discuss btn btn-default">Discuss</a>-->
+    </div>
+</template>
+
+
+
+<!--<tr>-->
+    <!--<td><h3><a href="#">{{task}}</a></h3> </td>-->
+    <!--<td style="vertical-align:middle;text-align: right">-->
+        <!--<div class="my-checkbox switch switch-small">-->
+            <!--<input type="checkbox"  {{checked}}>-->
+        <!--</div>-->
+    <!--</td>-->
+<!--</tr>-->

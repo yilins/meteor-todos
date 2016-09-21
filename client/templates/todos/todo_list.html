@@ -1,0 +1,18 @@
+<template name="todoList">
+    <div class="page">
+    <table class="table table-striped">
+        <tbody>
+        {{#each todos}}
+            {{>todoItem}}
+        {{/each}}
+        </tbody>
+    </table>
+    {{#if nextPath}}
+        <a class="load-more" href="{{nextPath}}">Load more</a>
+    {{else}}
+        {{#unless ready}}
+            {{> spinner}}
+        {{/unless}}
+    {{/if}}
+    </div>
+</template>

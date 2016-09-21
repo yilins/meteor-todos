@@ -1,0 +1,15 @@
+<template name="todoItem">
+        <tr class="{{checked}}" >
+            <td><input type="checkbox"  {{checked}}></td>
+            <td name="todoItem">{{todoName}}</td>
+            <td>{{#if toolOptions}}
+                {{#if tool}}
+                    {{>counter}}
+                {{else}}
+                    {{>timer}}
+                {{/if}}
+                {{else}}
+                <input type="text" value={{note}} placeholder="备注">
+            {{/if}}</td>
+        </tr>
+</template>

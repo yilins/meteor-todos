@@ -1,0 +1,124 @@
+body {
+    background: url(/images/subtle_white_feathers.png) repeat 0 0 ;
+    color: #666666;
+    font-family: "Microsoft YaHei";
+}
+.header{
+    padding: 0;
+}
+.task,.tasks-top,.home{
+    position: relative;
+    background: #fff;
+    border-radius: 3px;
+    padding: 10px;
+    margin-bottom: 10px;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15); }
+.task{
+    *zoom: 1;
+    opacity: 1;
+}
+#main{
+    position: relative;
+}
+.page{
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.home{
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+.explanation-left,.explanation-right{
+    width: 49%;
+    height: 200px;
+}
+@media screen and (max-width: 480px) {
+    .explanation-left,.explanation-right{
+        width: 100%;
+    }
+}
+.explanation-right{
+    float: right;
+}
+.explanation-left{
+    float: left;
+}
+.explanation p{
+    margin: auto 0;
+    padding: 15px;
+}
+.navbar {
+    margin-bottom: 10px; }
+
+.navbar .navbar-inner {
+    border-radius: 0 0 3px 3px; }
+.task.animate{
+    transition:all 300ms 0ms ease-in;
+}
+.task.animate{
+    -webkit-transition: all 300ms 0ms;
+    -moz-transition: all 300ms 0ms ease-in;
+    -o-transition: all 300ms 0ms ease-in;
+    transition: all 300ms 0ms ease-in; }
+.task:after ,.explanation:after{
+    content: "";
+    display: table;
+    clear: both; }
+.task .task-title {
+   float: left}
+.task .task-title h3 {
+    margin: 0;
+    vertical-align:middle;
+    font-size: 18px; }
+.task .task-title h3 a {
+    display: inline-block;
+    margin-right: 5px; }
+.task .task-title h3 a span {
+    margin-left: 10px;
+    font-weight: normal;
+    font-size: 14px;
+    display: inline-block;
+    color: #aaaaaa; }
+.task .task-title p {
+    margin: 0; }
+.task p{
+    float:right;
+    margin-top: 7px;
+}
+.tasks-top ul{
+    margin: 0
+}
+@media screen and (max-width: 480px) {
+    .tasksCount{
+        display: none!important;
+    }
+}
+.load-more {
+    display: block;
+    border-radius: 3px;
+    background: rgba(0, 0, 0, 0.05);
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+    margin-bottom: 10px; }
+.load-more:hover {
+    text-decoration: none;
+    background: rgba(0, 0, 0, 0.1); }
+
+.checked{
+    pointer-events: none;
+    background-color: #dff0d8!important;
+}
+input.error{
+    background-color:rgb(255, 231, 231);
+}
+
+
+
+
+
+
+

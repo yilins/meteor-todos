@@ -1,0 +1,31 @@
+<template name="taskEdit">
+    <form class="taskEdit form-horizontal page">
+        <div class="form-group">
+            <label for="task" class="col-sm-2 control-label">任务</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="task" value={{task}} placeholder="输入你的任务"  required>
+            </div>
+        </div>
+        {{#unless taskEditA}}
+            {{#if taskEditB}}
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">计数器</label>
+                    <div class="col-sm-5">
+                        <input type="number" class="form-control"  id="counter" value="{{counter}}"  placeholder="固定值(默认为1)">
+                    </div>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control" id="unit" value="{{unit}}" placeholder="单位（选填）">
+                    </div>
+                </div>
+            {{else}}
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">计时器</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control"  id="objectTime" value="{{objectTime}}"  placeholder="目标时间">
+                    </div>
+                </div>
+            {{/if}}
+        {{/unless}}
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</template>

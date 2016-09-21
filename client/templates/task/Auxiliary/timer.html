@@ -1,0 +1,11 @@
+<template name="timer">
+    <input type="text" id="time" value="" name="time">
+    {{#if playTime}}
+        <a href="#" type="button" class="btn btn-default  btn-xs" id="pauseTime">
+            <span class="glyphicon glyphicon-pause"></span></a>
+    {{else}}
+        <a href="#" type="button" class="btn btn-default  btn-xs" id="playTime">
+            <span class="glyphicon glyphicon-play"></span>
+        </a>
+    {{/if}}
+</template>

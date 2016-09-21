@@ -1,0 +1,47 @@
+<template name="taskSubmit">
+    <form class="taskSubmit form-horizontal page">
+        <div class="form-group">
+            <label for="task" class="col-sm-2 control-label">任务</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="task" value="" placeholder="输入你的任务"  required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="auxiliary" class="col-sm-2 control-label">辅助</label>
+                <div class="col-sm-10">
+                    <select id="auxiliary" class="form-control" >
+                        <option value='0' disabled selected style='display:none;'>请选择辅助功能</option>
+                        {{#each auxiliarys}}
+                            {{> auxiliary}}
+                        {{/each}}
+                    </select>
+                </div>
+        </div>
+        {{#unless taskSubmitA}}
+        {{#if taskSubmitB}}
+        <div class="form-group">
+            <label class="col-sm-2 control-label">计数器</label>
+            <div class="col-sm-5">
+                <input type="number" class="form-control"  id="counter" value=""  placeholder="固定值(选填,默认为1)">
+            </div>
+            <div class="col-sm-5">
+                <input type="text" class="form-control" id="unit" value="" placeholder="单位（选填）">
+            </div>
+        </div>
+        {{else}}
+            <div class="form-group">
+                <label class="col-sm-2 control-label">计时器</label>
+                <div class="col-sm-3">
+                    <input type="number" class="form-control"  id="objectTime" value=""  placeholder="目标时间(h)">
+                </div>
+            </div>
+
+        {{/if}}
+        {{/unless}}
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</template>
+
+<template name="auxiliary">
+    <option value="{{val}}">{{name}}</option>
+</template>

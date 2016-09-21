@@ -1,0 +1,29 @@
+<template name="home">
+    <div class="page">
+    <div class="home jumbotron">
+        <h1>Welcome page!</h1>
+        <p>This is a todos of applications.</p>
+        {{#unless currentUser}}
+        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#login">
+            Login
+        </button>
+        <button type="button" id="temporarily" class="btn btn-default btn-lg" data-toggle="modal" data-target="#register">
+            Register
+        </button>
+        {{/unless}}
+    </div>
+        <div class="explanation">
+          <div class=" home explanation-left">
+              <p>This is a learning meteor do demo.This is done using meteor developed web applications.
+                 It is not perfect, then me will continue to improve! So before the next version,
+                  temporarily for personal use only.</p>
+          </div>
+            <div class=" home explanation-right">
+                 <p>It can help you manage your tasks and to-do, the current task is completed
+                     the number of recording functions, but also help develop the habit of the time record.</p>
+            </div>
+        </div>
+            {{>login}}
+            <!--{{>register}}-->
+    </div>
+</template>
